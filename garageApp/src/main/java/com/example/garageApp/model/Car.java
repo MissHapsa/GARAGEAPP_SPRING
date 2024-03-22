@@ -1,5 +1,12 @@
 package com.example.garageApp.model;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+// ajout de la classe Car qui permet de creer une nouvelle entite dans la base de donnees
+
 public class Car {
 
 
@@ -21,10 +28,12 @@ public class Car {
         TAN
     }
 
-
+    @Id
+    // ajout de l attribut id qui permet de creer une nouvelle entite dans la base de donnees
     private long id;
     private String model;
     private String brand;
+    @Column(name = "released_year")
     private int year;
     private Color color;
 
